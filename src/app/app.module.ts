@@ -28,6 +28,11 @@ import {HttpManagerInterceptor} from "./components/interceptors/http-manager.int
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { DochangessComponent } from './components/dochangess/dochangess.component';
+import { PipesssComponent } from './components/pipesss/pipesss.component';
+import { PhoneauthComponent } from './components/phoneauth/phoneauth.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +48,11 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
     FindComponent,
     UpdateComponent,
     LoadingComponent,
+    ParentComponent,
+    ChildComponent,
+    DochangessComponent,
+    PipesssComponent,
+    PhoneauthComponent,
   ],
   imports: [
     BrowserModule,
