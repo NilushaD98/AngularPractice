@@ -17,11 +17,14 @@ import { AllComponent } from './components/all/all.component';
 import { FindComponent } from './components/find/find.component';
 import { UpdateComponent } from './components/update/update.component';
 import {MatButtonModule} from "@angular/material/button";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatIconModule} from "@angular/material/icon";
+import { LoadingComponent } from './components/loading/loading.component';
+import {MatProgressSpinnerModule, MatSpinner} from "@angular/material/progress-spinner";
+import {HttpManagerInterceptor} from "./components/interceptors/http-manager.interceptor";
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import {MatIconModule} from "@angular/material/icon";
     AllComponent,
     FindComponent,
     UpdateComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,10 +53,13 @@ import {MatIconModule} from "@angular/material/icon";
     MatInputModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressSpinnerModule
   ],
   providers: [
-    CookieService
+    CookieService,
+    {provide:HTTP_INTERCEPTORS,useClass:HttpManagerInterceptor,multi:true}
   ],
   bootstrap: [AppComponent]
 })
