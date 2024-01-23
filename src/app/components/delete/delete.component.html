@@ -1,0 +1,25 @@
+<!-- table.component.html -->
+<div class="container mt-4">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">USER_ID</th>
+      <th scope="col">TITLE</th>
+      <th scope="col">BODY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let temp of list">
+      <td>{{temp.id}}</td>
+      <td>{{temp.userId}}</td>
+      <td>{{temp.title}}</td>
+      <td>{{temp.body}}</td>
+      <td><button mat-raised-button color="warn" (click)="deleteThis(temp.id)">
+        <mat-icon>delete</mat-icon>
+         Delete</button></td>
+    </tr>
+    <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>

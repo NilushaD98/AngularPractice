@@ -1,0 +1,11 @@
+<!-- login.component.html -->
+
+<div class="login-container">
+  <form class="login-form">
+    <h2>Login</h2>
+    <input [(ngModel)]="email" type="text" id="username" name="username" required placeholder="email">
+    <input [(ngModel)]="password" type="password" id="password" name="password" required placeholder="password">
+
+    <button type="submit" value="login" (click)="login()">Login</button>
+  </form>
+</div>

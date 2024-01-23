@@ -1,0 +1,12 @@
+.container{
+  width: 100vw;
+  background-color: #131a1a;
+  height: 100vh;
+}
+.header-container{
+
+}
+.center-container{
+  color: white;
+  padding: 60px 0px 60px 60px ;
+}

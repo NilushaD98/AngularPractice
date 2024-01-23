@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  background-color: #0c2d42;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+}

@@ -1,0 +1,19 @@
+<!--interpolation-->
+<p>my name is {{name}} and age is {{age}}</p>
+
+<!--property binding-->
+
+<h1 [style.color]="color"> Test</h1>
+
+<!--event binding -->
+<input type="text"
+       #myVar
+       (keyup.enter)="setData(myVar.value)"
+       placeholder="type here">
+<button (click)="printTheDate()">Print</button>
+<p> the text : {{data}}</p>
+
+<input type="text"
+  [(ngModel)]="data2"
+  placeholder="type 2">
+<p>{{data2}}</p>
